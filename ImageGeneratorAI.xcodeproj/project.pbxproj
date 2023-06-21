@@ -14,6 +14,10 @@
 		15726DA52A35E4E70002D4EE /* ImageGeneratorAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15726DA42A35E4E70002D4EE /* ImageGeneratorAITests.swift */; };
 		15726DAF2A35E4E70002D4EE /* ImageGeneratorAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15726DAE2A35E4E70002D4EE /* ImageGeneratorAIUITests.swift */; };
 		15726DB12A35E4E70002D4EE /* ImageGeneratorAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15726DB02A35E4E70002D4EE /* ImageGeneratorAIUITestsLaunchTests.swift */; };
+		15726DBF2A35E53F0002D4EE /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 15726DBE2A35E53F0002D4EE /* OpenAIKit */; };
+		15726DF82A373E1D0002D4EE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15726DF72A373E1D0002D4EE /* ViewModel.swift */; };
+		158A6FD92A42F7C1003147F9 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 158A6FD82A42F7C1003147F9 /* Configuration.plist */; };
+		158A6FDC2A42FAC7003147F9 /* DotEnv in Frameworks */ = {isa = PBXBuildFile; productRef = 158A6FDB2A42FAC7003147F9 /* DotEnv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		15726DAA2A35E4E70002D4EE /* ImageGeneratorAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGeneratorAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15726DAE2A35E4E70002D4EE /* ImageGeneratorAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorAIUITests.swift; sourceTree = "<group>"; };
 		15726DB02A35E4E70002D4EE /* ImageGeneratorAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		15726DF72A373E1D0002D4EE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		158A6FD82A42F7C1003147F9 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158A6FDC2A42FAC7003147F9 /* DotEnv in Frameworks */,
+				15726DBF2A35E53F0002D4EE /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +82,7 @@
 		15726D872A35E4E50002D4EE = {
 			isa = PBXGroup;
 			children = (
+				158A6FD82A42F7C1003147F9 /* Configuration.plist */,
 				15726D922A35E4E50002D4EE /* ImageGeneratorAI */,
 				15726DA32A35E4E70002D4EE /* ImageGeneratorAITests */,
 				15726DAD2A35E4E70002D4EE /* ImageGeneratorAIUITests */,
@@ -98,6 +107,7 @@
 				15726D952A35E4E50002D4EE /* ContentView.swift */,
 				15726D972A35E4E70002D4EE /* Assets.xcassets */,
 				15726D992A35E4E70002D4EE /* Preview Content */,
+				15726DF72A373E1D0002D4EE /* ViewModel.swift */,
 			);
 			path = ImageGeneratorAI;
 			sourceTree = "<group>";
@@ -143,6 +153,10 @@
 			dependencies = (
 			);
 			name = ImageGeneratorAI;
+			packageProductDependencies = (
+				15726DBE2A35E53F0002D4EE /* OpenAIKit */,
+				158A6FDB2A42FAC7003147F9 /* DotEnv */,
+			);
 			productName = ImageGeneratorAI;
 			productReference = 15726D902A35E4E50002D4EE /* ImageGeneratorAI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,10 @@
 				Base,
 			);
 			mainGroup = 15726D872A35E4E50002D4EE;
+			packageReferences = (
+				15726DBD2A35E53F0002D4EE /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+				158A6FDA2A42FAC7003147F9 /* XCRemoteSwiftPackageReference "DotEnv" */,
+			);
 			productRefGroup = 15726D912A35E4E50002D4EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158A6FD92A42F7C1003147F9 /* Configuration.plist in Resources */,
 				15726D9B2A35E4E70002D4EE /* Preview Assets.xcassets in Resources */,
 				15726D982A35E4E70002D4EE /* Assets.xcassets in Resources */,
 			);
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15726D962A35E4E50002D4EE /* ContentView.swift in Sources */,
+				15726DF82A373E1D0002D4EE /* ViewModel.swift in Sources */,
 				15726D942A35E4E50002D4EE /* ImageGeneratorAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,8 +437,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGeneratorAI/Preview Content\"";
+				DEVELOPMENT_TEAM = X7GN5SR8KR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs access to your photo library to save generated images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,8 +468,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageGeneratorAI/Preview Content\"";
+				DEVELOPMENT_TEAM = X7GN5SR8KR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs access to your photo library to save generated images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -577,6 +603,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15726DBD2A35E53F0002D4EE /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MarcoDotIO/OpenAIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		158A6FDA2A42FAC7003147F9 /* XCRemoteSwiftPackageReference "DotEnv" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftpackages/DotEnv.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15726DBE2A35E53F0002D4EE /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15726DBD2A35E53F0002D4EE /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+		158A6FDB2A42FAC7003147F9 /* DotEnv */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 158A6FDA2A42FAC7003147F9 /* XCRemoteSwiftPackageReference "DotEnv" */;
+			productName = DotEnv;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15726D882A35E4E50002D4EE /* Project object */;
 }
