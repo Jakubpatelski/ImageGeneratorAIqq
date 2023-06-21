@@ -10,6 +10,7 @@ import OpenAIKit
 
 struct ContentView: View {
     
+    
     @State private var isLoading = true
     
     @ObservedObject var viewModel = ViewModel()
